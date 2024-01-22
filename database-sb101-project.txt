@@ -1,0 +1,88 @@
+MVC -> model view controller
+(mysql)|(frontend end)|(tech-> jdbc)
+
+
+
+
+create database CourseMonitoringSystem;
+
+---------Admin---------------
+
+create table Admin(
+username varchar(55) primary key UNIQUE,
+password varchar(20)
+);
+
+ALTER TABLE faculty AUTO_INCREMENT=1001;
+
+
+****inserting****
+insert into Admin values ("pranshu@bisht","Parley@Bisht");
+insert into Admin values ("hrithi_bisht","Hritu@Bisht");
+insert into Admin values ("kavita_bora","kavi@bora");
+insert into Admin values ("gaurav_bora","gaurav@bora");
+
+
+
+
+---------Faculty--------------
+
+create table Faculty(
+facultyid int primary key AUTO_INCREMENT,
+facultyname varchar(25),
+facultyaddress varchar(55),
+mobile long,
+email varchar(55) UNIQUE,
+username varchar(55) UNIQUE,
+password varchar(22)
+);
+
+
+****inserting****
+
+insert into faculty(facultyname,facultyaddress,mobile,email,username,password) values("History","History Department", 7845487465, "history@gmail.com", "history@department","abcde");
+
+
+
+-------Course---------
+
+create table Course(
+courseId int primary key AUTO_INCREMENT,
+courseName varchar(22),
+fee long,
+courseDescription varchar(80)
+);
+
+-------Batch--------
+
+create table Batch(
+batchId int primary key AUTO_INCREMENT,
+courseId int,
+FOREIGN KEY(courseId) references Course(courseid),
+facultyId int,
+FOREIGN KEY(facultyId) references Faculty(facultyid),
+numberofStudents long,
+batchstartDate DATE,
+duration int
+);
+
+
+
+
+-------Course Plan----------
+
+create table CoursePlan(
+planId int primary key AUTO_INCREMENT,
+batchId int,
+FOREIGN KEY(batchId) references Batch(batchId),
+daynumber int,
+topic varchar(30),
+status varchar(20)
+);
+
+
+alter table course
+change column coursid courseId int;
+
+
+

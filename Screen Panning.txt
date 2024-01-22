@@ -1,0 +1,36 @@
+Admin:->
+
+Course Section --->  Create , Update , View
+
+Faculty Section ---> Create , Update , View
+
+Batch Section ---> Create , Update , View
+
+Course Plan Section ---> Create , Update , View
+
+
+Faculty:->
+ 
+1. Course Plan View
+2. Course Plan Section ---> Create , Update , 
+3. Update Password 
+
+
+
+
+Faculty Usecases
+Clean code
+Fixing Bugs
+Proper Commenting
+Github Readme.md
+Discription about project on repo
+
+
+
+
+//for color full console
+
+https://www.w3schools.blog/java-console-and-terminal-color  
+
+
+
